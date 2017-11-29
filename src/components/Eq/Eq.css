@@ -1,0 +1,18 @@
+.bar {
+  background-color: red;
+  z-index: 2;
+  transition: height 1250ms; }
+
+.bar:hover {
+  height: 100% !important;
+  transition: height 10ms;
+  width: 3px !important; }
+
+.barInvis {
+  opacity: 0.5;
+  height: 175%; }
+
+.barInvis:hover + .bar {
+  height: 100% !important;
+  width: 3px !important;
+  transition: height 10ms; }
