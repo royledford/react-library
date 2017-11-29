@@ -1,0 +1,102 @@
+:root {
+  --navbar-width: 188px;
+  --breakpoint: 800px;
+  --orange-trans: rgba(99, 54, 4, 0.4);
+}
+
+@media only screen and (min-width: 801px) {
+  .sidebarmenu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .sidebarmenu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: --navbar-width;
+    background-color: --orange-trans;
+    height: 100%;
+    padding: 0;
+    text-align: right;
+    transition: right 250ms ease-out;
+  }
+
+  .sidebarmenu-hidden {
+    right: ---navbar-width;
+  }
+
+  .sidebarmenu-list {
+    list-style: none;
+    text-align: right;
+    padding-right: 28px;
+  }
+
+  .sidebarmenu-close-wrap {
+    position: relative;
+    height: 120px;
+    cursor: pointer;
+  }
+  .sidebarmenu-icon {
+    position: relative;
+    top: 45px;
+    right: 28px;
+    width: 20px;
+    margin-bottom: 44px;
+  }
+
+  .sidebarmenu-link {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+
+  .sidebarmenu-item {
+    position: relative;
+    right: 0;
+    height: 50px;
+    width: 160px;
+    overflow: hidden;
+    transition: all 250ms ease-out;
+    transition-delay: 250ms;
+    white-space: nowrap;
+  }
+
+  .sidebarmenu-item-hidden {
+    width: 0;
+    right: ---navbar-width;
+  }
+
+  .sidebarmenu-item a {
+    display: block;
+    height: 50px;
+  }
+  .sidebarmenu-link:link {
+    color: white;
+  }
+  .sidebarmenu-link:visited {
+    color: white;
+  }
+  .sidebarmenu-link:hover {
+    color: white;
+  }
+  .sidebarmenu-link:active {
+    color: white;
+  }
+
+  .sidebarmenu-cache {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: visible;
+  }
+
+  .sidebarmenu-cache-hidden {
+    visibility: hidden;
+  }
+}
